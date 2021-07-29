@@ -1,13 +1,17 @@
 const dice = require('./game.js');
 
 
-// test('SnakesAndLadders', () => {
-//
-//   beforeEach(() => {
-//     jest.spyOn(global.Math, 'random').mockReturnValue(2)
-//   });
+describe('SnakesAndLadders', () => {
+
+  beforeEach(() => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.5);
+  });
+
+  afterEach(() => {
+    jest.spyOn(global.Math, 'random').mockRestore();
+})
 
   test('dice allows player to roll a dice which returns a random number', () => {
-    expect(dice()).toEqual(2)
+    expect(dice()).toEqual(4)
   });
-// });
+});
