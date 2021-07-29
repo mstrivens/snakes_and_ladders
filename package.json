@@ -1,0 +1,23 @@
+{
+  "name": "snakes_and_ladders_js",
+  "version": "1.0.0",
+  "description": "Snakes and Ladders Game",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mstrivens/snakes_and_ladders.git"
+  },
+  "author": "Max Strivens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mstrivens/snakes_and_ladders/issues"
+  },
+  "homepage": "https://github.com/mstrivens/snakes_and_ladders#readme"
+}
