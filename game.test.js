@@ -1,4 +1,7 @@
-const dice = require('./game.js');
+const SnakesAndLadders = require('./game.js');
+
+const game = new SnakesAndLadders();
+// const roll = require('./game.js');
 
 describe('dice takes mock of 4', () => {
   beforeEach(() => {
@@ -10,12 +13,12 @@ describe('dice takes mock of 4', () => {
 })
 
   test('dice allows player to roll a dice which returns a random number', () => {
-    expect(dice()).toEqual(4)
+    expect(game.dice()).toEqual(4)
   });
 
-  // test('roll allows players to roll 2 dice which return a random number', () => {
-  //   expect(roll()).toEqual(8)
-  // })
+  test('roll allows players to roll 2 dice which return a random number', () => {
+    expect(game.roll()).toEqual(8)
+  })
 });
 
 describe('dice takes mock of 2', () => {
@@ -28,6 +31,6 @@ describe('dice takes mock of 2', () => {
 })
 
   test('dice allows player to roll a dice which returns a random number', () => {
-    expect(dice()).toEqual(2)
+    expect(game.dice()).toEqual(2)
   });
 });

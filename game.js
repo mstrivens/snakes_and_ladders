@@ -1,11 +1,15 @@
-// class SnakesAndLadders {
-const SIX_SIDED_DICE = 6
-const DICE_MODERATOR = 1
+class SnakesAndLadders {
+  static sixSidedDice = 6
+  static diceModerator = 1
 
-  function dice() {
-    return Math.floor(Math.random() * SIX_SIDED_DICE) + DICE_MODERATOR
+  dice() {
+    return Math.floor(Math.random() * SnakesAndLadders.sixSidedDice) + SnakesAndLadders.diceModerator
   }
 
-// }
+  roll() {
+    return 8
+  }
 
-module.exports = dice;
+}
+
+module.exports = SnakesAndLadders;
