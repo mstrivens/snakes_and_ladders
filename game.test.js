@@ -13,7 +13,7 @@ describe('dice takes mock of 4', () => {
 })
 
   test('dice allows player to roll a dice which returns a random number', () => {
-    expect(game.dice()).toEqual(4)
+    expect(game.sixSidedDice()).toEqual(4)
   });
 
   test('roll allows players to roll 2 dice which return a random number', () => {
@@ -31,6 +31,6 @@ describe('dice takes mock of 2', () => {
 })
 
   test('dice allows player to roll a dice which returns a random number', () => {
-    expect(game.dice()).toEqual(2)
+    expect(game.sixSidedDice()).toEqual(2)
   });
 });

@@ -1,15 +1,14 @@
 class SnakesAndLadders {
-  static sixSidedDice = 6
+  static diceSides = 6
   static diceModerator = 1
 
-  dice() {
-    return Math.floor(Math.random() * SnakesAndLadders.sixSidedDice) + SnakesAndLadders.diceModerator
+  sixSidedDice() {
+    return Math.floor(Math.random() * SnakesAndLadders.diceSides) + SnakesAndLadders.diceModerator
   }
 
   roll() {
     return 8
   }
-
 }
 
 module.exports = SnakesAndLadders;
