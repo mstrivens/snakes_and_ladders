@@ -39,9 +39,10 @@ describe('dice takes mock of 2', () => {
   })
 });
 
-describe('player position', () => {
+describe('new game initializes with player names', () => {
 
-  test('player position initializes at 0', () => {
-    expect(game.playerPosition).toEqual(0)
+  test('player 1 name is Max', () => {
+    game1 = new SnakesAndLadders("Max")
+    expect(game1.player1.name).toEqual("Max")
   })
 })

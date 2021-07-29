@@ -1,6 +1,10 @@
+const Player = require ('./player.js')
+
+
 class SnakesAndLadders {
-  constructor () {
-  this.playerPosition = 0;
+  constructor(player1, player2) {
+  this.player1 = new Player(player1)
+  this.player2 = new Player(player2)
   }
   static diceSides = 6
   static diceModerator = 1
