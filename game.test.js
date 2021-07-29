@@ -19,6 +19,10 @@ describe('dice takes mock of 4', () => {
   test('roll allows players to roll 2 dice which return a random number', () => {
     expect(game.roll()).toEqual(8)
   })
+
+  test('roll adds the roll value to the player position', () => {
+    expect(game.player1.position).toEqual(8)
+  })
 });
 
 describe('dice takes mock of 2', () => {
