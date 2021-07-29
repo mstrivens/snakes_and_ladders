@@ -38,3 +38,10 @@ describe('dice takes mock of 2', () => {
     expect(game.roll()).toEqual(4)
   })
 });
+
+describe('player position', () => {
+
+  test('player position initializes at 0', () => {
+    expect(game.playerPosition).toEqual(0)
+  })
+})

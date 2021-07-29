@@ -1,4 +1,7 @@
 class SnakesAndLadders {
+  constructor () {
+  this.playerPosition = 0;
+  }
   static diceSides = 6
   static diceModerator = 1
 
