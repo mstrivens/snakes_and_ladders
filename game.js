@@ -5,6 +5,11 @@ class SnakesAndLadders {
   constructor(player1, player2) {
   this.player1 = new Player(player1)
   this.player2 = new Player(player2)
+  this.ladders = {
+    2: 30,
+    7: 14,
+    8: 31
+  }
   }
   static diceSides = 6
   static diceModerator = 1
@@ -22,12 +27,7 @@ class SnakesAndLadders {
   }
 
   checkPlayerSquare() {
-    if (this.player1.position === 2) {
-      this.player1.position = 30
-    }
-    else {
-      this.player1.position = 14
-    }
+    this.player1.position = this.ladders[this.player1.position]
   }
 }
 
