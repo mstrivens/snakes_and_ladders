@@ -1,6 +1,5 @@
 const Player = require ('./player.js')
 
-
 class SnakesAndLadders {
   constructor(player1, player2) {
   this.player1 = new Player(player1)
@@ -8,7 +7,15 @@ class SnakesAndLadders {
   this.ladders = {
     2: 30,
     7: 14,
-    8: 31
+    8: 31,
+    15: 26,
+    21: 42,
+    28: 84,
+    36: 44,
+    51: 67,
+    71: 91,
+    78: 98,
+    87: 94
   }
   }
   static diceSides = 6
