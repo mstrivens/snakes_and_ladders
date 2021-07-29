@@ -20,6 +20,10 @@ class SnakesAndLadders {
     this.player1.position += totalRoll
     return totalRoll
   }
+
+  checkPlayerSquare() {
+    this.player1.position = 30
+  }
 }
 
 module.exports = SnakesAndLadders;

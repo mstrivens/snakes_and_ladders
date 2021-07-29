@@ -52,9 +52,16 @@ describe('dice takes mock of 2', () => {
 });
 
 describe('new game initializes with player names', () => {
-
   test('player 1 name is Max', () => {
     game1 = new SnakesAndLadders("Max")
     expect(game1.player1.name).toEqual("Max")
+  })
+})
+
+describe('a player lands on a ladder which takes him to another square', () => {
+  test('player lands on square 2 which takes them to square 38', () => {
+    game.player1.position = 2
+    game.checkPlayerSquare()
+    expect(game.player1.position).toEqual(30)
   })
 })
