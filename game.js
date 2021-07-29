@@ -7,7 +7,9 @@ class SnakesAndLadders {
   }
 
   roll() {
-    return 8
+    var move = []
+    move.push(this.sixSidedDice(), this.sixSidedDice())
+    return move.reduce((roll1, roll2) => roll1 + roll2)
   }
 }
 
