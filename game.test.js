@@ -76,4 +76,10 @@ describe('a player lands on a ladder which takes them to another square', () => 
     game.checkPlayerSquare()
     expect(game.player1.position).toEqual(31)
   })
+
+  test('player lands on square 9 which is not a ladder', () => {
+    game.player1.position = 9
+    game.checkPlayerSquare()
+    expect(game.player1.position).toEqual(9)
+  })
 })

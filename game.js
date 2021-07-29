@@ -27,7 +27,9 @@ class SnakesAndLadders {
   }
 
   checkPlayerSquare() {
-    this.player1.position = this.ladders[this.player1.position]
+    if (this.ladders[this.player1.position] !== undefined) {
+      this.player1.position = this.ladders[this.player1.position]
+    }
   }
 }
 
