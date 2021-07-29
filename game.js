@@ -22,7 +22,12 @@ class SnakesAndLadders {
   }
 
   checkPlayerSquare() {
-    this.player1.position = 30
+    if (this.player1.position === 2) {
+      this.player1.position = 30
+    }
+    else {
+      this.player1.position = 14
+    }
   }
 }
 

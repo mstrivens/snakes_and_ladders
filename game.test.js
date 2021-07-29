@@ -58,10 +58,16 @@ describe('new game initializes with player names', () => {
   })
 })
 
-describe('a player lands on a ladder which takes him to another square', () => {
+describe('a player lands on a ladder which takes them to another square', () => {
   test('player lands on square 2 which takes them to square 38', () => {
     game.player1.position = 2
     game.checkPlayerSquare()
     expect(game.player1.position).toEqual(30)
+  })
+
+  test('player lands on square 7 which takes them to square 14', () => {
+    game.player1.position = 7
+    game.checkPlayerSquare()
+    expect(game.player1.position).toEqual(14)
   })
 })
