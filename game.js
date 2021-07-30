@@ -4,6 +4,7 @@ class SnakesAndLadders {
   constructor(player1, player2) {
   this.player1 = new Player(player1)
   this.player2 = new Player(player2)
+  this.totalRoll = 0
   this.ladders = {
     2: 30,
     7: 14,
@@ -33,6 +34,7 @@ class SnakesAndLadders {
   static diceSides = 6
   static diceModerator = 1
 
+
   sixSidedDice() {
     return Math.floor(Math.random() * SnakesAndLadders.diceSides) + SnakesAndLadders.diceModerator
   }
@@ -40,13 +42,14 @@ class SnakesAndLadders {
   roll() {
     var move = []
     move.push(this.sixSidedDice(), this.sixSidedDice())
-    var totalRoll = move.reduce((roll1, roll2) => roll1 + roll2)
-    console.log(`You rolled ${totalRoll}`)
-    this.player1.position += totalRoll
+    this.totalRoll = move.reduce((roll1, roll2) => roll1 + roll2)
+    console.log(`You rolled ${this.totalRoll}`)
+    this.player1.position += this.totalRoll
+    this.gameOver()
     // var player1position = this.player1.position
     // setTimeout(function() {console.log(`You are now on square ${player1position}`)}, 3000)
     this.checkPlayerSquare()
-    return totalRoll
+    return this.totalRoll
   }
 
   checkPlayerSquare() {
@@ -62,6 +65,12 @@ class SnakesAndLadders {
   gameOver() {
     if (this.player1.position === 100) {
       return true
+      console.log("Game Over!")
+    } else if (this.player1.position > 100) {
+      var diff = this.player1.position - 100
+      this.player1.position = 100
+      this.player1.position -= diff
+      return false
     } else {
       return false
     }

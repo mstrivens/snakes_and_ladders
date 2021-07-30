@@ -26,7 +26,23 @@ describe('dice takes mock of 4', () => {
     expect(game.player1.position).toEqual(6)
   })
 
+  test('game ends when player lands exactly on square 100', () => {
+    game.player1.position = 94
+    game.roll()
+    expect(game.gameOver()).toEqual(true)
+  })
 
+  test('game does not ends when player lands does not land on square 100 exactly', () => {
+    game.player1.position = 98
+    game.roll()
+    expect(game.gameOver()).toEqual(false)
+  })
+
+  test('game returns bouce back position when player lands does not land on square 100 exactly', () => {
+    game.player1.position = 98
+    game.roll()
+    expect(game.player1.position).toEqual(96)
+  })
 });
 
 describe('dice takes mock of 2', () => {
@@ -62,6 +78,12 @@ describe('dice takes mock of 2', () => {
     game.player1.position = 98
     game.roll()
     expect(game.gameOver()).toEqual(false)
+  })
+
+  test('game returns bouce back position when player lands does not land on square 100 exactly', () => {
+    game.player1.position = 98
+    game.roll()
+    expect(game.player1.position).toEqual(98)
   })
 });
 
