@@ -29,13 +29,18 @@ class SnakesAndLadders {
     var move = []
     move.push(this.sixSidedDice(), this.sixSidedDice())
     var totalRoll = move.reduce((roll1, roll2) => roll1 + roll2)
+    console.log(`You rolled ${totalRoll}`)
     this.player1.position += totalRoll
+    // var player1position = this.player1.position
+    // setTimeout(function() {console.log(`You are now on square ${player1position}`)}, 3000)
+    this.checkPlayerSquare()
     return totalRoll
   }
 
   checkPlayerSquare() {
     if (this.ladders[this.player1.position] !== undefined) {
       this.player1.position = this.ladders[this.player1.position]
+      console.log(`You have landed on a ladder, you have climbed to square ${this.player1.position}`)
     }
   }
 }

@@ -5,7 +5,7 @@ const game = new SnakesAndLadders();
 
 describe('dice takes mock of 4', () => {
   beforeEach(() => {
-    jest.spyOn(global.Math, 'random').mockReturnValue(0.5);
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.4);
     game.player1.position = 0
   });
 
@@ -14,16 +14,16 @@ describe('dice takes mock of 4', () => {
 })
 
   test('dice allows player to roll a dice which returns a random number', () => {
-    expect(game.sixSidedDice()).toEqual(4)
+    expect(game.sixSidedDice()).toEqual(3)
   });
 
   test('roll allows players to roll 2 dice which return a random number', () => {
-    expect(game.roll()).toEqual(8)
+    expect(game.roll()).toEqual(6)
   })
 
   test('roll adds the roll value to the player position', () => {
     game.roll()
-    expect(game.player1.position).toEqual(8)
+    expect(game.player1.position).toEqual(6)
   })
 });
 
