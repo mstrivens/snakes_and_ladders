@@ -90,4 +90,10 @@ describe('a player lands on a snake which takes them to another square', () => {
     game.checkPlayerSquare()
     expect(game.player1.position).toEqual(6)
   })
+
+  test('player lands on square 16 which takes them to square 6', () => {
+    game.player1.position = 46
+    game.checkPlayerSquare()
+    expect(game.player1.position).toEqual(25)
+  })
 })
