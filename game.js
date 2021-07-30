@@ -5,6 +5,7 @@ class SnakesAndLadders {
   this.player1 = new Player(player1)
   this.player2 = new Player(player2)
   this.totalRoll = 0
+  this.turn = this.player1
   this.ladders = {
     2: 30,
     7: 14,

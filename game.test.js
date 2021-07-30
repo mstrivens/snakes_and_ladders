@@ -133,3 +133,9 @@ describe('a player lands on a snake which takes them to another square', () => {
     expect(game.player1.position).toEqual(25)
   })
 })
+
+describe('player turns', () => {
+  test('player 1 turn starts as true', () => {
+    expect(game.turn).toEqual(game.player1)
+  })
+})

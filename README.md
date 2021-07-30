@@ -38,4 +38,4 @@ Program has 2 players
 [] Players take turns
 [x] If the player lands on a ladder square they jump up to the top of the ladder
 [x] If a player lands on a snake square they drop to the bottom of the snake
-[] Player must land on exactly square 100 at the end otherwise they move back the amount of square they rolled over
+[x] Player must land on exactly square 100 at the end otherwise they move back the amount of square they rolled over
