@@ -35,7 +35,8 @@ Program has 2 players
 [x] Each player on their go rolls 2 6 sided dice
 [x] The player moves the amount of squares
 [] If the 2 dice are the same number then player rolls again
-[] Players take turns
+[] The check square function takes into account the player turns.
+[x] Players take turns
 [x] If the player lands on a ladder square they jump up to the top of the ladder
 [x] If a player lands on a snake square they drop to the bottom of the snake
 [x] Player must land on exactly square 100 at the end otherwise they move back the amount of square they rolled over
