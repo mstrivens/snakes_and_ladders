@@ -57,6 +57,12 @@ describe('dice takes mock of 2', () => {
     game.roll()
     expect(game.gameOver()).toEqual(true)
   })
+
+  test('game does not ends when player lands does not land on square 100 exactly', () => {
+    game.player1.position = 98
+    game.roll()
+    expect(game.gameOver()).toEqual(false)
+  })
 });
 
 describe('new game initializes with player names', () => {

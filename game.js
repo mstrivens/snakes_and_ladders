@@ -60,7 +60,11 @@ class SnakesAndLadders {
   }
 
   gameOver() {
-    return true
+    if (this.player1.position === 100) {
+      return true
+    } else {
+      return false
+    }
   }
 }
 
