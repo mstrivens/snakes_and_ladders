@@ -58,6 +58,10 @@ class SnakesAndLadders {
       console.log(`Oops! You have landed on a snake, you have slid down to square ${this.player1.position}`)
     }
   }
+
+  gameOver() {
+    return true
+  }
 }
 
 module.exports = SnakesAndLadders;

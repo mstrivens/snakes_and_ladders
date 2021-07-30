@@ -25,6 +25,8 @@ describe('dice takes mock of 4', () => {
     game.roll()
     expect(game.player1.position).toEqual(6)
   })
+
+
 });
 
 describe('dice takes mock of 2', () => {
@@ -48,6 +50,12 @@ describe('dice takes mock of 2', () => {
   test('roll adds the roll value to the player position', () => {
     game.roll()
     expect(game.player1.position).toEqual(4)
+  })
+
+  test('game ends when player lands exactly on square 100', () => {
+    game.player1.position = 96
+    game.roll()
+    expect(game.gameOver()).toEqual(true)
   })
 });
 
