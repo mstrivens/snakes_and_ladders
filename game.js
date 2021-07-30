@@ -44,9 +44,10 @@ class SnakesAndLadders {
   checkPlayerSquare() {
     if (this.ladders[this.player1.position] !== undefined) {
       this.player1.position = this.ladders[this.player1.position]
-      console.log(`You have landed on a ladder, you have climbed to square ${this.player1.position}`)
+      console.log(`Yay! You have landed on a ladder, you have climbed to square ${this.player1.position}`)
     } else if (this.snakes[this.player1.position] !== undefined) {
       this.player1.position = this.snakes[this.player1.position]
+      console.log(`Oops! You have landed on a snake, you have slid down to square ${this.player1.position}`)
     }
   }
 }
