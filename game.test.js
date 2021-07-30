@@ -135,7 +135,12 @@ describe('a player lands on a snake which takes them to another square', () => {
 })
 
 describe('player turns', () => {
-  test('player 1 turn starts as true', () => {
+  test('turn starts as set to player1', () => {
     expect(game.turn).toEqual(game.player1)
+  })
+
+  test('turn is set to player2 after one turn', () => {
+    game.swapTurn()
+    expect(game.turn).toEqual(game.player2)
   })
 })

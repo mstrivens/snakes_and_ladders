@@ -76,6 +76,10 @@ class SnakesAndLadders {
       return false
     }
   }
+
+  swapTurn() {
+    this.turn = this.player2
+  }
 }
 
 module.exports = SnakesAndLadders;
