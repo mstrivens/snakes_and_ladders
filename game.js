@@ -45,7 +45,11 @@ class SnakesAndLadders {
     move.push(this.sixSidedDice(), this.sixSidedDice())
     this.totalRoll = move.reduce((roll1, roll2) => roll1 + roll2)
     console.log(`You rolled ${this.totalRoll}`)
-    this.player1.position += this.totalRoll
+    if (this.turn === this.player1) {
+      this.player1.position += this.totalRoll
+    } else {
+       this.player2.position += this.totalRoll
+     }
     this.gameOver()
     // var player1position = this.player1.position
     // setTimeout(function() {console.log(`You are now on square ${player1position}`)}, 3000)

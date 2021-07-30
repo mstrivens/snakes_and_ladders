@@ -138,7 +138,7 @@ describe('player turns', () => {
   beforeEach(() => {
     game.turn = game.player1
   });
-  
+
   test('turn starts as set to player1', () => {
     expect(game.turn).toEqual(game.player1)
   })
@@ -152,5 +152,11 @@ describe('player turns', () => {
     game.swapTurn()
     game.swapTurn()
     expect(game.turn).toEqual(game.player1)
+  })
+
+  test('turn is set to player1 after two turns', () => {
+    game.swapTurn()
+    game.roll()
+    expect(game.player2.position).not.toBe(0)
   })
 })
