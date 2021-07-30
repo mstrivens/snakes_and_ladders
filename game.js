@@ -78,7 +78,7 @@ class SnakesAndLadders {
   }
 
   swapTurn() {
-    this.turn = this.player2
+    return (this.turn === this.player1 ? this.turn = this.player2 : this.turn = this.player1)
   }
 }
 
