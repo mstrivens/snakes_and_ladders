@@ -41,6 +41,8 @@ class SnakesAndLadders {
     if (this.ladders[this.player1.position] !== undefined) {
       this.player1.position = this.ladders[this.player1.position]
       console.log(`You have landed on a ladder, you have climbed to square ${this.player1.position}`)
+    } else if (this.player1.position === 16) {
+      this.player1.position = 6
     }
   }
 }
